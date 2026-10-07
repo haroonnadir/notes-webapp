@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div id="content">
+    <div id="navbar">
+        <img id="logo" src="logo.png" alt="Logo">
+        <h3>My Notes</h3>
+    </div>
+    <div id="main">
+      <div id="writing">
+          <div id="inp">
+              <input type="text" placeholder="Write Your Notes Here..." id="inpnotes" maxlength="200" autocomplete="off">
+              <p id="counter">0 / 200</p>
+          </div>
+      </div>
+      <div id="btn">
+        <button id="add">
+            <span>+</span>
+            Add Note</button>
+      </div>
+    </div>
+    <hr>
+    <div id="notes-header">
+        <h3>Your Notes <span id="note-count"></span></h3>
+        <button id="clear-all">Clear All</button>
+    </div>
+    <p id="empty-msg">No notes yet. Start by adding your first note! 📝</p>
+    <div id="notes-container">
+    </div>
+ </div>
+ <footer id="footer">
+    <p>Made with ❤️ by <span id="author">Haroon Nadir</span></p>
+ </footer>
+ <script src="script.js"></script>
+</body>
+</html>

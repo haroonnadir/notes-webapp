@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+    width: 100%;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+#content{
+    flex: 1;
+}
+
+#navbar{
+    height: 50px;
+    width: 100%;
+    background-color: rgb(15, 15, 39);
+    color: beige;
+    display: flex;
+    align-items: center;
+}
+#logo{
+    height: 80%;
+    width: auto;
+    margin: 10px;
+}
+#navbar h3{
+    font-family: "Lucida Handwriting", "Lucida Italic", cursive;
+}
+#main{
+    gap: 10px;
+    padding: 20px;
+    width: 100%;
+    background-color: #efe8f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#writing{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+#inp{
+    min-height: 100px;
+    width: 70%;
+    min-width: 260px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #c0bdbd;
+    padding: 7px;
+}
+#inpnotes{
+    outline: none;
+    border: none;
+    width: 100%;
+    font-size: 16px;
+    padding: 4px;
+}
+#counter{
+    text-align: right;
+    margin-top: 40px;
+    margin-right: 8px;
+    color: gray;
+    font-size: 14px;
+}
+#btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#add{
+    background-color: rgb(85, 12, 154);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: beige;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+}
+#add:hover{
+    cursor: pointer;
+    background-color: rgb(110, 30, 180);
+}
+#add span{
+    margin-right: 10px;
+}
+hr{
+    border: none;
+    border-top: 1px solid #c0bdbd;
+}
+#notes-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+#clear-all{
+    border: 1px solid #c0bdbd;
+    background: white;
+    color: #a00;
+    padding: 6px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+#clear-all:hover{
+    background: #fee;
+}
+#notes-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.note-card{
+    min-height: 180px;
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    position: relative;
+}
+.note-card:hover{
+    transform: translateY(-5px);
+}
+.note-card p{
+    font-size: 18px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+    padding-top: 28px;
+}
+.note-actions{
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    display: flex;
+    gap: 6px;
+}
+.icon-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.6);
+    color: #555;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+.edit-btn:hover{
+    background: #fff;
+    color: rgb(85, 12, 154);
+}
+.delete-btn:hover{
+    background: #fff;
+    color: red;
+}
+.edit-area{
+    width: 100%;
+    min-height: 100px;
+    margin-top: 28px;
+    padding: 6px;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 1.5;
+    border: 1px solid rgba(0,0,0,0.25);
+    border-radius: 8px;
+    background: rgba(255,255,255,0.7);
+    resize: vertical;
+    outline: none;
+}
+h3{
+    margin-left: 10px;
+    margin-top: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#note-count{
+    color: gray;
+    font-weight: normal;
+}
+#empty-msg{
+    text-align: center;
+    color: gray;
+    font-size: 18px;
+    margin-top: 30px;
+}
+#footer{
+    width: 100%;
+    background-color: rgb(15, 15, 39);
+    color: aliceblue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 15px;
+}
+
+#author{
+    font-weight: bold;
+    background: linear-gradient(90deg, #ff6ec7, #a855f7, #38bdf8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #c084fc;
+}
+
+@media (max-width: 600px){
+    #inp{
+        width: 95%;
+    }
+    #logo{
+        height: 70%;
+    }
+}
